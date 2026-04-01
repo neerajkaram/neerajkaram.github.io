@@ -1,15 +1,130 @@
 ---
 layout: default
+title: Home
 ---
 
-<div class="home">
-  <h1>Hi, I'm Neeraj 👋</h1>
-  <p>I am security researcher, and Ph.D. candidate focused on Security and Privacy.</p>
-  <ul>
-    <li>🔐 Federated learning & system security</li>
-    <li>⚙️ C, Python, Docker, Linux</li>
-    <li>📘 Projects: <a href="/projects">Antitoxin</a>, <a href="/projects">SMuF</a></li>
-  </ul>
-  <p><a href="mailto:gourmet.fir_6i@icloud.com">Email me</a> • <a href="https://github.com/neerajkaram">GitHub</a></p>
-</div>
+<div class="container">
 
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-greeting">Neeraj Karamchandani</p>
+        <h1>Security researcher building offensive tools for AI and distributed systems.</h1>
+        <p class="hero-intro">
+          Ph.D. candidate at Penn State focused on adversarial ML, agentic AI security, and federated learning. I also teach computer and network security, and have been recognized with multiple Best TA awards.
+        </p>
+        <div class="hero-links">
+          <a href="mailto:gourmet.fir_6i@icloud.com">Email</a>
+          <span class="sep">/</span>
+          <a href="https://linkedin.com/in/karamchandani">LinkedIn</a>
+          <span class="sep">/</span>
+          <a href="https://github.com/neerajkaram">GitHub</a>
+          <span class="sep">/</span>
+          <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="/images/headshot.jpg" alt="Neeraj Karamchandani">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-label">Research Interests</p>
+    <div class="interests">
+      <span class="interest-tag">AI/ML Red Teaming</span>
+      <span class="interest-tag">Adversarial Machine Learning</span>
+      <span class="interest-tag">Agentic AI Security</span>
+      <span class="interest-tag">Federated Learning</span>
+      <span class="interest-tag">Memory Poisoning</span>
+      <span class="interest-tag">Smart Contract Security</span>
+      <span class="interest-tag">IoT Fuzzing</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-label">Selected Work</p>
+
+    <div class="project-card">
+      <div class="project-title">Memory Poisoning and Privilege Escalation in Agentic AI</div>
+      <div class="project-venue">Under review — top-tier security venue</div>
+      <p class="project-desc">
+        Novel memory-poisoning attacks targeting LLM-based agents with persistent memory, RAG, and tool use. Includes a new architectural defense evaluated across clinical, QA, and e-commerce domains.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">LLM agents</span>
+        <span class="project-tag">memory poisoning</span>
+        <span class="project-tag">red teaming</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">Antitoxin: Stealthy Backdoor Control in Federated Learning</div>
+      <div class="project-venue">SecureComm 2025</div>
+      <p class="project-desc">
+        Red-team framework for stealthy control of backdoors in federated learning, demonstrating evasion of modern aggregation defenses.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">federated learning</span>
+        <span class="project-tag">backdoor attacks</span>
+        <span class="project-tag">PyTorch</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">Text-to-Unlearn: Privacy in Generative Models</div>
+      <div class="project-venue">Under review</div>
+      <p class="project-desc">
+        Content moderation and privacy in GANs using text prompts, enabling concept unlearning without annotated data.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">GANs</span>
+        <span class="project-tag">machine unlearning</span>
+        <span class="project-tag">privacy</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 20px;">
+      <a href="/projects" style="font-size: 14px; font-weight: 500;">View all projects →</a>
+    </p>
+  </div>
+
+  <div class="section">
+    <p class="section-label">Experience</p>
+
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <span class="timeline-role">Teaching &amp; Research Assistant</span>
+        <span class="timeline-date">2015 – Present</span>
+      </div>
+      <div class="timeline-org">Pennsylvania State University</div>
+      <p class="timeline-desc">
+        Ph.D. research in offensive security for ML systems. Taught and TA'd courses in computer/network security (CSE 543, CMPSC 443), system programming, data structures, and discrete mathematics for classes of 400+ students. Best TA award 2021–22 and 2024–25.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <span class="timeline-role">Security Research Intern</span>
+        <span class="timeline-date">Summer 2022</span>
+      </div>
+      <div class="timeline-org">Ancilia Inc, Mountain View, CA</div>
+      <p class="timeline-desc">
+        Web3 security research: vulnerability detection, threat modeling, adversary emulation, and smart contract static analysis. Built the company's first real-time attack detection pipeline.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <span class="timeline-role">Visiting Fellow</span>
+        <span class="timeline-date">Summer 2017</span>
+      </div>
+      <div class="timeline-org">Singapore University of Technology and Design</div>
+      <p class="timeline-desc">
+        Built a mutation-based fuzzing framework for IoT protocol testing, discovering DoS, buffer overflow, and session hijacking vulnerabilities.
+      </p>
+    </div>
+
+  </div>
+
+</div>

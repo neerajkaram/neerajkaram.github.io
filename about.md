@@ -1,21 +1,73 @@
 ---
-layout: page
-title: About Me
+layout: default
+title: About
 permalink: /about/
 ---
 
-I am currently pursuing my Ph.D. in Computer Science at Penn State, with a focus on security in federated learning. My research explores emerging threats in distributed machine learning, with an emphasis on backdoor injection, threat modeling, and stealthy attack removal. My latest work involves developing a framework for the controlled and stealthy removal of persistent backdoors, challenging existing assumptions in federated learning threat models.
+<div class="container">
+  <div class="page-content">
 
-In the past, Ihave worked on IoT security, smart contract analysis, and blockchain security. I am also a Certified Ethical Hacker (CEH v8) through EC-Council.
+    <h1>About</h1>
 
-Alongside research, I have served as a Head TA for graduate and undergraduate courses in system programming, discrete mathematics, and computer/network security. I’ve designed course materials, debugged student code, and broken down complex systems concepts into clear, accessible explanations. These experiences have given me a strong foundation in both cybersecurity and technical communication.
+    <p>
+      I am a Ph.D. candidate in Computer Science at Penn State. My research focuses on offensive security for machine learning systems — adversarial attacks on federated learning, memory poisoning of LLM-based agents, and privacy in generative models. I focus on understanding the attacker's perspective to inform stronger defenses.
+    </p>
 
-Over the years, I have developed tools for fuzzing, bug reproduction, and vulnerability detection, and mentored students in low-level C debugging. I enjoy solving real-world problems at the intersection of security, systems, and education.
+    <p>
+      Alongside research, I have extensive teaching experience across five CS courses, from introductory system programming to graduate-level network security. I have managed teams of TAs, designed labs and course materials, and taught classes of 400+ students. I was awarded Best TA for 2021–2022 and 2024–2025.
+    </p>
 
-When I am not immersed in code or research, I love cooking, traveling to new places, watching and playing cricket, and following soccer. These interests keep me grounded, open to new experiences, and constantly curious.
+    <h2>Education</h2>
 
+    <div class="edu-item">
+      <div class="edu-degree">Ph.D. in Computer Science</div>
+      <div class="edu-school">Pennsylvania State University</div>
+      <div class="edu-year">Expected 2025</div>
+    </div>
 
-<!-- TODO: Add link to updated resume [Download my resume](assets/resume.pdf) -->
+    <div class="edu-item">
+      <div class="edu-degree">M.S. in Computer Science</div>
+      <div class="edu-school">Pennsylvania State University</div>
+      <div class="edu-year">2017</div>
+    </div>
 
+    <div class="edu-item">
+      <div class="edu-degree">B.E. in Computer Science and Engineering</div>
+      <div class="edu-school">Visvesvaraya Technological University, Bangalore</div>
+      <div class="edu-year">2014</div>
+    </div>
 
+    <h2>Skills</h2>
 
+    <div class="skills-grid">
+      <span class="skills-label">Languages</span>
+      <span class="skills-value">Python, C, C++, Bash, Solidity</span>
+
+      <span class="skills-label">Security Tools</span>
+      <span class="skills-value">AFL/AFL++, Nmap, Wireshark, Metasploit, Nessus, OWASP ZAP, Slither, Ghidra, IDA Pro, Snort</span>
+
+      <span class="skills-label">Cloud &amp; Infra</span>
+      <span class="skills-value">AWS (EC2), Docker, GitHub Actions</span>
+
+      <span class="skills-label">ML &amp; Frameworks</span>
+      <span class="skills-value">PyTorch, Federated Learning, OWASP Top 10 (LLM &amp; Web), STRIDE Threat Modeling</span>
+    </div>
+
+    <h2>Certifications</h2>
+    <p>
+      Certified Ethical Hacker v8 (EC-Council) · Cryptography I (Stanford / Coursera)
+    </p>
+
+    <h2>Teaching</h2>
+    <p>
+      Courses I have taught or TA'd at Penn State:
+    </p>
+    <p>
+      CSE 543 (Graduate Computer &amp; Network Security), CMPSC 443 (Undergraduate Computer &amp; Network Security), CMPSC 311 (System Programming), CMPSC 465 (Data Structures and Algorithms), CMPSC 360 (Discrete Mathematics).
+    </p>
+    <p>
+      Responsibilities have included lecturing, designing projects and homework, running recitations, managing teams of TAs, individual student mentoring, and deploying cloud-based lab environments on AWS.
+    </p>
+
+  </div>
+</div>

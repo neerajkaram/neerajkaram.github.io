@@ -1,289 +1,433 @@
 ---
 ---
 
-//
-// IMPORTS
-//
+/* ── Reset ───────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-@import "reset";
-@import "variables";
-// Syntax highlighting @import is at the bottom of this file
-
-/**************/
-/* BASE RULES */
-/**************/
-
-html {
-  font-size: 100%;
+/* ── Variables ───────────────────────────────────────── */
+:root {
+  --text: #1a1a1a;
+  --text-secondary: #555;
+  --text-light: #777;
+  --bg: #fafaf8;
+  --bg-card: #fff;
+  --border: #e0ddd8;
+  --accent: #2d5f8a;
+  --accent-hover: #1e4468;
+  --accent-light: #eef3f8;
+  --serif: 'Source Serif 4', Georgia, serif;
+  --sans: 'Source Sans 3', -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+  --max-w: 720px;
 }
+
+/* ── Base ────────────────────────────────────────────── */
+html { scroll-behavior: smooth; }
 
 body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
-  color: $darkGray;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
-  width: 100%;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
-  color: $darkerGray;
-  font-weight: bold;
-
-  line-height: 1.7;
-  margin: 1em 0 15px;
-  padding: 0;
-
-  @include mobile {
-    line-height: 1.4;
-  }
-}
-
-h1 {
-  font-size: 30px;
-  a {
-    color: inherit;
-  }
-}
-
-h2 {
-  font-size: 24px;
-}
-
-h3 {
-  font-size: 20px;
-}
-
-h4 {
-  font-size: 18px;
-  color: $gray;
-}
-
-p {
-  margin: 15px 0;
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: $blue;
+  color: var(--accent);
   text-decoration: none;
-	cursor: pointer;
-  &:hover, &:active {
-    color: $blue;
-  }
+  transition: color 0.2s;
+}
+a:hover { color: var(--accent-hover); }
+
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-ul, ol {
-  margin: 15px 0;
-  padding-left: 30px;
+/* ── Header ──────────────────────────────────────────── */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-ul {
-  list-style-type: disc;
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
 }
 
-ol {
-  list-style-type: decimal;
+.site-logo {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+.site-logo:hover { color: var(--accent); }
+
+.site-nav { display: flex; gap: 28px; }
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.3px;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
 }
 
-ol ul, ul ol, ul ul, ol ol {
-  margin: 0;
+/* ── Hero (index page) ───────────────────────────────── */
+.hero {
+  padding: 72px 0 56px;
 }
 
-ul ul, ol ul {
-  list-style-type: circle;
+.hero-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
 }
 
-em, i {
-  font-style: italic;
+.hero-text {
+  flex: 1;
+  min-width: 0;
 }
 
-strong, b {
-  font-weight: bold;
+.hero-photo {
+  flex-shrink: 0;
+  width: 150px;
+  padding-top: 8px;
 }
 
-img {
-  max-width: 100%;
+.hero-photo img {
+  width: 150px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  filter: grayscale(15%);
 }
 
-// Fixes images in popup boxes from Google Translate
-.gmnoprint img {
-  max-width: none;
+.hero-greeting {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
 }
 
-.date {
-  font-style: italic;
-  color: $gray;
+.hero h1 {
+  font-family: var(--serif);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
 }
 
-// Specify the color of the selection
-::-moz-selection {
-  color: $black;
-  background: $lightGray;
-}
-::selection {
-  color: $black;
-  background: $lightGray;
+.hero-intro {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
 }
 
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
+.hero-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.clearfix:after {
-    clear: both;
+.hero-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hero-links a:hover { color: var(--accent); }
+
+.hero-links .sep {
+  color: var(--border);
+  user-select: none;
 }
 
-/*********************/
-/* LAYOUT / SECTIONS */
-/*********************/
-
-//
-// .masthead
-//
-
-.wrapper-masthead {
-  margin-bottom: 50px;
+/* ── Section styling ─────────────────────────────────── */
+.section {
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
 }
 
-.masthead {
+.section-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 24px;
+}
+
+/* ── Research Interests ──────────────────────────────── */
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.interest-tag {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 6px 14px;
+  border-radius: 4px;
+}
+
+/* ── Experience / Timeline ───────────────────────────── */
+.timeline-item {
+  margin-bottom: 28px;
+}
+
+.timeline-item:last-child { margin-bottom: 0; }
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.timeline-role {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.timeline-date {
+  font-size: 13px;
+  color: var(--text-light);
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline-org {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.timeline-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ── Project cards ───────────────────────────────────── */
+.project-card {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid var(--border);
+}
+.project-card:last-child { border-bottom: none; }
 
-  @include mobile {
-    text-align: center;
-  }
+.project-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--text);
+  margin-bottom: 6px;
 }
 
-.site-avatar {
-  float: left;
-  width: 70px;
-  height: 70px;
-  margin-right: 15px;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-
-  img {
-    border-radius: 5px;
-  }
+.project-venue {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 
-.site-info {
-  float: left;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
+.project-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
-.site-name {
-  margin: 0;
-  color: $darkGray;
-  cursor: pointer;
-  font-family: $helveticaNeue;
-  font-weight: 300;
-  font-size: 28px;
-  letter-spacing: 1px;
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
 }
 
-.site-description {
-  margin: -5px 0 0 0;
-  color: $gray;
+.project-tag {
+  font-size: 11px;
+  font-family: var(--mono);
+  color: var(--text-light);
+  background: #f3f2ef;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+/* ── Page content (about, etc.) ──────────────────────── */
+.page-content {
+  padding: 56px 0 64px;
+}
+
+.page-content h1 {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  letter-spacing: -0.3px;
+}
+
+.page-content h2 {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.page-content h3 {
   font-size: 16px;
+  font-weight: 600;
+  margin-top: 28px;
+  margin-bottom: 10px;
+  color: var(--text);
+}
 
-  @include mobile {
-    margin: 3px 0;
+.page-content p {
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+}
+
+.page-content ul, .page-content ol {
+  margin-bottom: 16px;
+  padding-left: 20px;
+}
+
+.page-content li {
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* ── Skills grid ─────────────────────────────────────── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px 20px;
+  font-size: 14px;
+}
+
+.skills-label {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.skills-value {
+  color: var(--text-secondary);
+}
+
+/* ── Education ───────────────────────────────────────── */
+.edu-item {
+  margin-bottom: 16px;
+}
+
+.edu-degree {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.edu-school {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.edu-year {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+/* ── Footer ──────────────────────────────────────────── */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 0;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-name {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: var(--text-light);
+}
+.footer-links a:hover { color: var(--accent); }
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 600px) {
+  .hero { padding: 48px 0 36px; }
+  .hero h1 { font-size: 26px; }
+  .hero-intro { font-size: 16px; }
+
+  .hero-inner {
+    flex-direction: column-reverse;
+    gap: 24px;
   }
-}
 
-nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
-  font-size: 18px;
-
-  @include mobile {
-    float: none;
-    margin-top: 9px;
-    display: block;
-    font-size: 16px;
+  .hero-photo {
+    width: 120px;
   }
 
-  a {
-    margin-left: 20px;
-    color: $darkGray;
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
-
-    @include mobile {
-      margin: 0 10px;
-      color: $blue;
-    }
-  }
-}
-
-//
-// .main
-//
-
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
-}
-
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
-}
-
-.post {
-  blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
-    font-style: italic;
+  .hero-photo img {
+    width: 120px;
+    height: 144px;
   }
 
-  .comments {
-    margin-top: 10px;
+  .site-nav { gap: 16px; }
+  .nav-link { font-size: 13px; }
+
+  .timeline-header { flex-direction: column; }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 4px 0;
   }
+  .skills-label { margin-top: 8px; }
 
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
-  }
+  .footer-content { flex-direction: column; align-items: flex-start; }
 }
-
-.wrapper-footer {
-  margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
-}
-
-footer {
-  padding: 20px 0;
-  text-align: center;
-}
-
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-@import "highlights";
-@import "svg-icons";
