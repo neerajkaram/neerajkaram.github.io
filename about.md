@@ -10,31 +10,28 @@ permalink: /about/
     <h1>About</h1>
 
     <p>
-      I am a Ph.D. candidate in Computer Science at Penn State. My research focuses on offensive security for machine learning systems — adversarial attacks on federated learning, memory poisoning of LLM-based agents, and privacy in generative models. I focus on understanding the attacker's perspective to inform stronger defenses.
+      I am a computer security researcher with a focus on AI/ML security, offensive security, and secure systems. My work spans adversarial attacks in federated learning, memory poisoning in LLM-based agents, privacy in generative models, and applied security research in systems, IoT, and blockchain environments.
     </p>
 
     <p>
-      Alongside research, I have extensive teaching experience across five CS courses, from introductory system programming to graduate-level network security. I have managed teams of TAs, designed labs and course materials, and taught classes of 400+ students. I was awarded Best TA for 2021–2022 and 2024–2025.
+      In addition to research, I have extensive teaching experience across undergraduate and graduate computer science courses, including systems programming and network security. I have designed labs and course materials, led teams of TAs and mentored students in both technical and research settings. My teaching has been recognized with multiple Best TA awards.
     </p>
 
     <h2>Education</h2>
 
     <div class="edu-item">
-      <div class="edu-degree">Ph.D. in Computer Science</div>
+      <div class="edu-degree">Ph.D. Candidate in Computer Science</div>
       <div class="edu-school">Pennsylvania State University</div>
-      <div class="edu-year">Expected 2025</div>
     </div>
 
     <div class="edu-item">
       <div class="edu-degree">M.S. in Computer Science</div>
       <div class="edu-school">Pennsylvania State University</div>
-      <div class="edu-year">2017</div>
     </div>
 
     <div class="edu-item">
       <div class="edu-degree">B.E. in Computer Science and Engineering</div>
-      <div class="edu-school">Visvesvaraya Technological University, Bangalore</div>
-      <div class="edu-year">2014</div>
+      <div class="edu-school">Visvesvaraya Technological University</div>
     </div>
 
     <h2>Skills &amp; Tools</h2>
@@ -43,36 +40,24 @@ permalink: /about/
       <span class="skills-label">Languages</span>
       <span class="skills-value">Python, C, C++, Bash, Solidity</span>
 
-      <span class="skills-label">Offensive Security</span>
-      <span class="skills-value">Threat modeling (STRIDE), penetration testing, fuzzing (AFL/AFL++), reverse engineering (Ghidra, IDA Pro), exploit development, red teaming</span>
-
-      <span class="skills-label">AppSec &amp; SDLC</span>
-      <span class="skills-value">OWASP Top 10 (Web &amp; LLM), static analysis (Slither, Semgrep), code review, CI/CD security, SAST/DAST</span>
-
-      <span class="skills-label">Network &amp; IR</span>
-      <span class="skills-value">Nmap, Wireshark, Metasploit, Nessus, OWASP ZAP, Snort, vulnerability scanning, incident analysis</span>
-
-      <span class="skills-label">Cloud &amp; Infra</span>
-      <span class="skills-value">AWS (EC2, IAM, S3), Docker, Kubernetes, GitHub Actions, infrastructure-as-code</span>
+      <span class="skills-label">Security</span>
+      <span class="skills-value">Threat modeling, penetration testing, fuzzing, reverse engineering, code review, static and dynamic analysis</span>
 
       <span class="skills-label">AI/ML Security</span>
-      <span class="skills-value">PyTorch, LLM red teaming, adversarial ML, model poisoning, prompt injection testing, MITRE ATLAS</span>
-    </div>
+      <span class="skills-value">Adversarial ML, LLM red teaming, model poisoning, prompt injection testing, PyTorch, MITRE ATLAS</span>
 
-    <h2>Certifications</h2>
-    <p>
-      Certified Ethical Hacker v8 (EC-Council) · Cryptography I (Stanford / Coursera)
-    </p>
+      <span class="skills-label">Tools &amp; Infrastructure</span>
+      <span class="skills-value">Semgrep, Slither, OWASP ZAP, Nmap, Wireshark, Metasploit, AWS, Docker, Kubernetes, GitHub Actions</span>
+    </div>
 
     <h2>Teaching</h2>
     <p>
-      Courses I have taught or TA'd at Penn State:
+      I have supported courses in graduate and undergraduate security, systems programming, data structures, and discrete mathematics. My responsibilities have included lecturing, designing projects and assignments, leading recitations, mentoring students, and helping deploy cloud-based lab environments.
     </p>
+
+    <h2>Certifications</h2>
     <p>
-      CSE 543 (Graduate Computer &amp; Network Security), CMPSC 443 (Undergraduate Computer &amp; Network Security), CMPSC 311 (System Programming), CMPSC 465 (Data Structures and Algorithms), CMPSC 360 (Discrete Mathematics).
-    </p>
-    <p>
-      Responsibilities have included lecturing, designing projects and homework, running recitations, managing teams of TAs, individual student mentoring, and deploying cloud-based lab environments on AWS.
+      Certified Ethical Hacker (EC-Council) · Cryptography I (Stanford / Coursera)
     </p>
 
   </div>
