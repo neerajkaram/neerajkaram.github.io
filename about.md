@@ -37,20 +37,26 @@ permalink: /about/
       <div class="edu-year">2014</div>
     </div>
 
-    <h2>Skills</h2>
+    <h2>Skills &amp; Tools</h2>
 
     <div class="skills-grid">
       <span class="skills-label">Languages</span>
       <span class="skills-value">Python, C, C++, Bash, Solidity</span>
 
-      <span class="skills-label">Security Tools</span>
-      <span class="skills-value">AFL/AFL++, Nmap, Wireshark, Metasploit, Nessus, OWASP ZAP, Slither, Ghidra, IDA Pro, Snort</span>
+      <span class="skills-label">Offensive Security</span>
+      <span class="skills-value">Threat modeling (STRIDE), penetration testing, fuzzing (AFL/AFL++), reverse engineering (Ghidra, IDA Pro), exploit development, red teaming</span>
+
+      <span class="skills-label">AppSec &amp; SDLC</span>
+      <span class="skills-value">OWASP Top 10 (Web &amp; LLM), static analysis (Slither, Semgrep), code review, CI/CD security, SAST/DAST</span>
+
+      <span class="skills-label">Network &amp; IR</span>
+      <span class="skills-value">Nmap, Wireshark, Metasploit, Nessus, OWASP ZAP, Snort, vulnerability scanning, incident analysis</span>
 
       <span class="skills-label">Cloud &amp; Infra</span>
-      <span class="skills-value">AWS (EC2), Docker, GitHub Actions</span>
+      <span class="skills-value">AWS (EC2, IAM, S3), Docker, Kubernetes, GitHub Actions, infrastructure-as-code</span>
 
-      <span class="skills-label">ML &amp; Frameworks</span>
-      <span class="skills-value">PyTorch, Federated Learning, OWASP Top 10 (LLM &amp; Web), STRIDE Threat Modeling</span>
+      <span class="skills-label">AI/ML Security</span>
+      <span class="skills-value">PyTorch, LLM red teaming, adversarial ML, model poisoning, prompt injection testing, MITRE ATLAS</span>
     </div>
 
     <h2>Certifications</h2>
